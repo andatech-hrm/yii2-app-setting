@@ -25,7 +25,13 @@ class Module extends \yii\base\Module  implements \yii\base\BootstrapInterface
         // custom initialization code goes here
         $this->setLayout();
         
-        $this->registerTranslations();
+        //$this->registerTranslations();
+        
+//         $this->setModules([
+//             'translation' => [
+//                 'class' => 'lajax\translatemanager\Module'
+//             ]
+//         ]);
     }
     
     public function bootstrap($app)
@@ -61,7 +67,6 @@ class Module extends \yii\base\Module  implements \yii\base\BootstrapInterface
         foreach ($seos as $key => $seo){
             $app->view->registerMetaTag(['name' => $key, 'content' => $seo], $key);
         }
-        
     }
 
     /**
@@ -84,13 +89,13 @@ class Module extends \yii\base\Module  implements \yii\base\BootstrapInterface
             ]
         ];
         
-        Yii::$app->i18n->translations['andahrm/*'] = [
-            'class' => 'yii\i18n\PhpMessageSource',
-            'sourceLanguage' => 'en-US',
-            'basePath' => '@andahrm/setting/messages',
-            'fileMap' => [
-                'andahrm/setting' => 'setting.php',
-            ]
-        ];
+//         Yii::$app->i18n->translations['andahrm/*'] = [
+//             'class' => 'yii\i18n\PhpMessageSource',
+//             'sourceLanguage' => 'en-US',
+//             'basePath' => '@andahrm/setting/messages',
+//             'fileMap' => [
+//                 'andahrm/setting' => 'setting.php',
+//             ]
+//         ];
     }
 }
