@@ -58,6 +58,14 @@ class Module extends \yii\base\Module  implements \yii\base\BootstrapInterface
         $app->formatter->dateFormat = $general['dateformat'];
         $app->formatter->timeFormat = $general['timeformat'];
         $app->view->title = $general['title'];
+        
+        $reading = $settings['reading'];
+        $app->params['app-settings'] = [
+            'reading' => [
+                'pagesize' => $reading['page_size'],
+            ],
+        ];
+        
         $seos = [
             'description' => $general['description'],
             'keywords' => $general['keywords'],
