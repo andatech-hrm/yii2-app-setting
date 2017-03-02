@@ -39,9 +39,9 @@ class LocalAmphur extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('andahrm/settings', 'รหัสอำเภอ'),
-            'name' => Yii::t('andahrm/settings', 'อำเภอ'),
-            'province_id' => Yii::t('andahrm/settings', 'รหัสจังหวัด'),
+            'id' => Yii::t('andahrm/setting', 'ID'),
+            'name' => Yii::t('andahrm/setting', 'Name'),
+            'province_id' => Yii::t('andahrm/setting', 'Province'),
         ];
     }
 }

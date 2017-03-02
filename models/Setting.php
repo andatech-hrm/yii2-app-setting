@@ -41,10 +41,10 @@ class Setting extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('app', 'ID'),
-            'type' => Yii::t('app', 'Type'),
-            'name' => Yii::t('app', 'Name'),
-            'value' => Yii::t('app', 'Value'),
+            'id' => Yii::t('andahrm/setting', 'ID'),
+            'type' => Yii::t('andahrm/setting', 'Type'),
+            'name' => Yii::t('andahrm/setting', 'Name'),
+            'value' => Yii::t('andahrm/setting', 'Value'),
         ];
     }
 

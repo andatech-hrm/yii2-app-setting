@@ -42,11 +42,11 @@ class LocalTambol extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('andahrm/settings', 'เลขตำบล'),
-            'name' => Yii::t('andahrm/settings', 'ตำบล'),
-            'peaple' => Yii::t('andahrm/settings', 'จำนวนประชากร'),
-            'post' => Yii::t('andahrm/settings', 'รหัสไปรษณีย์'),
-            'amphur_id' => Yii::t('andahrm/settings', 'เลขอำเภอ'),
+            'id' => Yii::t('andahrm/setting', 'ID'),
+            'name' => Yii::t('andahrm/setting', 'Name'),
+            'peaple' => Yii::t('andahrm/setting', 'People'),
+            'post' => Yii::t('andahrm/setting', 'Post'),
+            'amphur_id' => Yii::t('andahrm/setting', 'Amphur'),
         ];
     }
 }

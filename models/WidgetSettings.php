@@ -18,24 +18,45 @@ class WidgetSettings
 
 		return $settings;
 	}
+	
+	
 
-
+	/**
+	 * 
+	public function beforeSave($insert)
+    {
+        if (parent::beforeSave($insert)) {
+            if($birthday = \DateTime::createFromFormat(Helper::UI_DATE_FORMAT, $this->birthday)) {
+                $this->birthday = $birthday->format(Helper::DB_DATE_FORMAT);
+            }
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    public function afterFind()
+    {
+        if($birthday = \DateTime::createFromFormat(Helper::DB_DATE_FORMAT, $this->birthday)){
+            $this->birthday = $birthday->format(Helper::UI_DATE_FORMAT);
+        }
+    }
+	 * 
+	**/
 	public static function DatePicker($arr = [])
 	{
 		$PHPFormatOptions = array('y', 'Y', 'm', 'd');
 		$JSFormatOptions = array('yy', 'yyyy', 'mm', 'dd'); // and so on
 		$JSFormat = str_replace($PHPFormatOptions, $JSFormatOptions, Helper::UI_DATE_FORMAT);
 		$settings = [
-			'options' => ['placeholder' => 'Select operating time ...'],
-			'type' => 3,
-// 			'convertFormat' => true,
-			'language'=>'th',  
-			'pluginOptions' => [
-				'autoclose' => true, 
-				'todayHighlight' => true,
-// 				'format' => 'd/M/y',
-				'format' => $JSFormat,
-			]
+			// 'options' => ['placeholder' => 'Select operating time ...', 'data-date-language'=>"th-th"],
+			// 'type' => 3,
+			// 'language'=>'th-th',
+			// 'pluginOptions' => [
+			// 	'autoclose' => true, 
+			// 	'todayHighlight' => true,
+			// 	'format' => $JSFormat,
+			// ]
 		];
 
 		$settings = array_replace_recursive($settings, $arr);

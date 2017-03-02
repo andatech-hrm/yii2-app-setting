@@ -37,8 +37,8 @@ class LocalRegion extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('andahrm/settings', 'ID'),
-            'name' => Yii::t('andahrm/settings', 'Name'),
+            'id' => Yii::t('andahrm/setting', 'ID'),
+            'name' => Yii::t('andahrm/setting', 'Name'),
         ];
     }
 }

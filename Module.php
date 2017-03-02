@@ -59,6 +59,11 @@ class Module extends \yii\base\Module  implements \yii\base\BootstrapInterface
         $app->formatter->timeFormat = $general['timeformat'];
         $app->view->title = $general['title'];
         
+        $appLang = strtolower($app->language);
+        if($appLang === 'th' || $appLang === 'th-th'){
+            //$app->formatter->class = '\dixonsatit\thaiYearFormatter\ThaiYearFormatter';
+        }
+        
         $reading = $settings['reading'];
         $app->params['app-settings'] = [
             'reading' => [
