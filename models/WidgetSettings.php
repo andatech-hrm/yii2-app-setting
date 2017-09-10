@@ -57,6 +57,9 @@ class WidgetSettings
 			// 	'todayHighlight' => true,
 			// 	'format' => $JSFormat,
 			// ]
+			'options' => [
+                //'daysOfWeekDisabled' => [0, 6],
+            ],
 		];
 
 		$settings = array_replace_recursive($settings, $arr);
